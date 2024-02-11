@@ -1,0 +1,78 @@
+EXCEPTION HANDLING 
+ Exception is event which will abraptly terminate the program. whenever any exception
+ is happen then they have to handle the exception by using USERDEFINEDEXCEPTION(UDH)
+ 
+ *If programmer is not provide UDH then exception handle by default Exception handler
+ 
+ *Statements which might generate Exception should be placed inside the try block
+ *Statements which has to be executed after handling the exception should be placed
+ inside the catch block
+ *Statements which is critical statements must be executed in all the sinariao should 
+ be placed inside the finally block.
+ 
+ *Try block executed irrespective of exception is handling are not.
+ *catch block is executed only if an exception is generated. 
+ *finally block is executed in all the sinario.
+ 
+ There are two type of Exception
+ 	1> Checked Exception
+ 	2> Unchecked Exception
+ 	
+ Checked Exception : are such a Exception which as handle by providing UDEH and if they are 
+ not handle by the java compiler through compilation error and force to handle the Exception.
+ 
+ Unchecked Exception : are such a Exception which are not mandatory to be handle  and if 
+ programmer will not handle the Exception then should be handle by Default Exception handler.
+ 
+PrintStackTrace()
+
+In Java, printStackTrace() is a method used to print the stack trace of an exception. 
+This method belongs to the Throwable class, 
+which is the superclass of all errors and exceptions in the Java language.
+
+When an ArithmeticException occurs (in this case, due to attempting to divide by zero),
+the printStackTrace() method is called on the exception object e, 
+and it prints a stack trace to the standard error stream, 
+which typically goes to the console. 
+This stack trace shows the sequence of method calls that led to the exception being thrown,
+along with the line numbers and class names. 
+can be very useful for debugging and diagnosing issues in your Java programs.
+
+Specific and Generic catch block
+
+In multiple catch block the specific catch block should be placed before the generic catch block.
+If any exception exception occur in try block then jvm checks which catch block can handle
+the exception in the squentially from top to bottom flows which  even  catch block can handle
+the exception will be executed other catch blocks will be skipped .If there is no specific catch
+block is present to handle  the exception then it will be generic catch block if it is provide.
+otherwise if it id not provide the exception then should by default exception handler which will
+result in abroptly terminate the program 
+
+*If generic catch block is placed before the specific catch block then result will compilation
+error.
+
+Exception in multiple methods.
+
+When an exception occurs in a method the control and the exception will be given back to jvm 
+and then jvm checks the method have the UDEH  or not, if UDEH are not present then exception
+is propagated to its caller method for getting handler .if caller method also do'nt have UDEH 
+then again Exception propagated to its caller method like keep on propagating. If none of methods
+can handle the exception then finally it will be handle by the default Exception handler and
+program will terminate abroptly and in such sinario handle the exception in the same method where
+it might generated.
+
+ Rethrowing an Exception 
+ 
+ Exception has got generated in the method  which is called if the information should
+ be passed to the caller method means if the exception should be rethrown to the caller
+ method then THROW keyword should be used to rethrowing the exception and THOWS should
+ be used for giving warning to caller method so that caller mehod also handle the Exception.
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
