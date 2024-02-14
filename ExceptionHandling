@@ -68,8 +68,75 @@ it might generated.
  method then THROW keyword should be used to rethrowing the exception and THOWS should
  be used for giving warning to caller method so that caller mehod also handle the Exception.
  
-
+ DUCKING AN EXCEPTION 
  
+ DUCKING an exception is process of not handling the exception in the same method 
+ where it is getting generated and just passing the exception to the caller method
+ without handling it.
+ 
+ In the program taking the user input by using InputStreamReader and BufferReader class
+ and using as a inbuilt method is readLine method.
+ 
+ Readline method is such a method which throws the checked exception i.e ioException
+ because it is check Exception i.e mandatory to handle it takeinput method isn't interted
+ in handling the Exception it is just passing the exception to its caller method by
+ using throws keyword.
+ 
+ Different b/w throw and throws
+    
+       throw                                 throws
+ 
+ * throw keyword is used to            * throws keyword is used to give
+   rethrow  an Exception to              warning to the caller method that
+   caller method                         is might throw an Exception
+ * throw keyword is used within        * throws keyword is used within 
+   the method from Exception             method signature in which giving 
+   must be thrown.                       warning to the caller method.
+ 
+
+Note: In the program if throw keyword is used then the statement placed after the 
+throw keyword will not be executed and if we make sure the statement is after throw 
+keyword is executed then we write the statement in the finally block will be executed
+before control will thrown out the program.
+
+Custom Exception are user-defined exception which are created by the programmer
+specifically for a particular application.To create the custom Exception class has
+to be created which should extend the Exception class
+ The message which has to be displayed while generating the custom Exception object 
+ should be given in the constructor of custom Exception class.
+ 
+ Rules of Method overriding with exception  handling
+ 
+ * If parent class throwing an exception then child class overridden method might not throw Exception
+ * If parent class method is throwing an Exception then child class overridden  method can throw
+   the same Exception.
+ * If parent class method is not throwing an Exception then child class overridden  method can throw
+   the unchecked Exception.
+ * If parent class method is not throwing an Exception then child class overridden  method can't throw
+   the checked Exception.
+ * If parent class method is throwing an Exception then child class overridden method can throw differnt
+   Exception, if parent class method exception and child class overridden method exception 
+   have parent and child relation.
+ * According to rule 5 the child class overridden method can thrown different exception 
+   but it is not possible if parent class method exception and child method exception doesn't
+   have parent and child relationship
+ * If parent class method throwing exception then child class overridden method can
+   throw different exception trough they don't have parent and child relationship 
+   both parent class method exception and child class overridden method exception are
+   runtime exception type(unchecked exception)
+ * If parent class method throwing exception then child class overridden method can
+   throw different exception even through  both are not unchecked exception type 
+   and also don't have parent and child relationship if the child class overridden
+   method exception is unchecked exception
+ * If parent class method throwing an exception then child class overridden method 
+   can't throw border exception  
+ 
+ 
+ 
+ 
+ 
+ 
+
  
  
  
