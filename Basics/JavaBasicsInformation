@@ -1,0 +1,362 @@
+Sldc stands for Software development life cycle 
+It consists of six stages.
+
+1. Requirement collection and analysis
+	
+	It is first stage  of developing software in these phase requirement are 
+	collected by business analysis or product analysis and they are analysed that
+	are completed,feasible,compatible.
+
+2. Design
+
+	In these phase designer can design the architecture according to requirement
+	such as low level design and high level design 
+
+3. Development/coding
+	
+	In these stage actual code will be return based on architectural design.
+
+4. Testing
+	
+	In these stage tester will test the software that has been according to requirement
+	or not
+
+5. Deployment
+
+	In these phase the running software is deployed in the server so that the client
+	can use it.
+
+6. Maintainance
+
+	In these phase maintainance team give support to the clients that if they need any
+	help then using the software.
+
+
+WHAT IS PROGRAMMING
+	Programming is a set of instruction 
+	
+WHAT IS PROGRAM
+	Program is set of instruction given to a computer.
+
+WHAT COMPUTER UDERSTAND
+	Computer can understand binary number i.e 1 0r 0.
+
+WHAT IS MACHINE LEVEL LANGUAGE
+	Machine level language is language consist of binary(0s) or binary(1s).
+
+PRINT AND PRINTLN in java
+	print can prints the data on the console and hold the cursor on the same line.
+	println can prints the data on the console and move the cursor to next line.
+	
+FLOW OF EXECUTION OF JAVA PROGRAM.
+	
+	It is consisting two phase
+	
+	compilation phase                  Execution phase
+	
+* The source code return in HLL i.e converted into ILL/byte code by using java compiler
+  ILL is converted into MLL by using JVM then processor can process binary code then given the output
+* Java code is return in the .java file then JRE is the region in the RAM is allocated by OS 
+  to execute particular java program. 
+* Every java program run its own JRE.
+* when java program is run java interpreter reads the byte code line by line and execute
+  them so interpreter process is straight forward and slow and using JVM optimize the 
+  performance and  making fast.
+  
+Java Interpreter
+
+Role and Function
+Bytecode Interpretation: When a Java program is compiled, it is converted into bytecode, 
+	which is a platform-independent code. The Java interpreter reads this bytecode 
+	and translates it into machine code for execution on the host machine.
+	
+JIT Compiler
+
+Role and Function
+Performance Optimization: While the interpreter translates and executes bytecode 
+one instruction at a time, the JIT compiler translates bytecode into native machine code
+at runtime. This machine code is then executed directly by the CPU,
+significantly improving performance.	
+
+JAVA ARCHITECTURE
+
+IT Consists of JDK the JDK consists of JAVA COMILER,DEVELOPER TOOLS AND JRE.
+JRE consists of  JAVA LIBRARY AND JVM
+JVM consists of CLASS LOADER,BYTE CODE VERIFIER AND JAVA EXECUTION ENGINE 
+JAVA EXECUTION ENGINE consists of JIT COMPILER AND JAVA'S INTERPRETER. 	
+	
+PLATFROM DEPENDENCY AND PLATFROM INDEPENDENCY 
+
+* Any programming language thats expects the platfrom to be same at the time of 
+ compilation and execution becomes platfrom dependency
+* Any programming language thats doesn't expects the platfrom to be same at the time of 
+ compilation and execution becomes platfrom independency
+
+* ARITEMATIC OPERATOR(+,-,*,/,%)
+* COMPARISION OPERATOR(<,>,<=,>=,==,!=)
+* ASSIGNMENT OPERATOR(=)
+* LOGICAL AND (&&)
+* LOGICAL OR (||)
+
+* Any platfrom dependent language is not portable.
+* Any platfrom independent language is portable.
+* The .class file is transportable to different machine with different platfrom and
+	making execution successfully is known as PORTABLE.
+	
+WORA (WRITE ONCE AND RETURN ANYWHERE)
+
+IT is a feature of java where java program can return once and run any where irrespective 
+of region and irrespective of platfrom where java program is executed.
+
+DATA TYPES:- Data types is a mechanism which tells what type of data store in variable.
+
+THERE ARE TWO TYPES OF DATA TYPES 
+1.PRIMITIVE DATATYPES(byte,short,int,long,char,float,double,boolean)
+2.NONPRIMITIVE DATATYPES(ARRAYS,STRINGS EXT...)
+	
+1.PRIMITIVE DATATYPES
+	[INTEGER TYPES]
+	*byte(1 bytes) of data can be stored
+	*short(2 bytes) of data can be stored
+	*int (4 bytes) of data can be stored
+	*long(8 bytes) of data can be stored
+	[REAL NUMBER TYPES]
+	*float(4 bytes):- flaot datatypes have a size of 4 bytes and always the float
+	values will have a suffix f with precision of 6-7 digits
+	*double(8 bytes):- double datatypes have a size of 8 bytes it doesn't require
+	suffix and it should be used when the precision should be around fifteen digits
+	
+	*Among float and double if more accuracy is recquired then double datatype should
+	 be prefferd
+	
+	[CHARACTER TYPE]
+	* CHAR :- to store the character type of values in java 
+	  the size of char datatype is two bytes and it is used to store alphabets,special character and 
+	  enclosed with single quotes.
+	[Boolean type]
+	*In java to store true or flase values boolean data type is uses 
+	*The size of boolean data type is JVM dependent
+	
+TYPE CASTING
+   1.IMPILICT TYPECASTING:- It is type casting  in which smaller size data type will
+	 be converted into larger size data type.
+   2.EXPILICT TYPECASTING:-It is type casting in which larger size data type will be 
+     converted into smaller size data type.
+     
+Note; 
+	* In java implicit type casting will happen automatically by the java compiler
+		 and there will not be any data lost.
+	* In java explicit type casting will not happen automatically by the java compiler
+		rater programmer do it manually so while programming there is chance of might data lost.
+	* Among all primitive data type boolean data type never participate in type casting.
+	* Although flaot data type and int data type have same size then also float to int 
+		conversion is explicit and int to float conversion id implicit type casting.
+	* Double to long conversion is explicit and long to double is implicit type casting
+	
+
+Methods in java
+	 A method is set of instruction which is written in one place to perform particular task.
+
+There are four types methods in java
+
+	1-method
+		These are such a method don't accept any parameter also don't return
+		any output and they don't have return type.
+		
+		No input -------------> No output
+	2-method 
+		These are such a method which accept parameter then don't return any output.
+		
+		Input ----------------> No output
+	3-method
+		These are such a method which don't accept parameter but return parameter.
+		
+		No input -------------> output
+	
+	4-method 
+		These are such a method which accept parameter and also return parameter.
+		
+		input ----------------> output
+	
+* Whenever method is called its stack frame/Activation record is created inside the
+  stack segment. stack frame will have all the information about the method along 
+  with memory of the local variables
+* When the control leaves the method its stack frame is deleted
+	
+METHOD OVERLOADING	
+	Method overloading is process creating multiple methods with same name inside 
+	the same class with different parameter,order of parameter,data type of parameter.
+
+Advantages of method overloading
+	
+	* Easy to remember the name
+	* Improve code readability and code organization.
+	* Increases the flexibility for program
+
+
+VIRTUAL POLYMORPHISM
+	POLYMORPHISM means one to many relationship during method overloading programmer
+	while calling methods will fell that one method do multiple task but in reality
+	one method do only one particular task hence this is false polymorphism.
+
+WHAT DO YOU MEAN COMPILE TIME POLYMORPHISM
+ During method overloading while calling the methods confusion will happen because 
+ multiple methods having the same name. This confusion will be solved by java compiler
+ by checking the following methods
+ 
+	1) It will the no of parameters
+	2) It will compare the data types of parameters
+	3) It will compare the order of data types of parameters
+
+
+* compiler will check and compare multiple methods on the factor during compilation time
+  hence method overloading is also known as compile time polymorphism.
+
+WHAT IS NOT ALLOW IN  METHOD OVERLOADING	
+	Method having same name don't have same no parameters,data types of parameters and
+	order of parameters
+
+CONSTRUCTOR OVERLOADING
+	IT is a process of creating multiple constructor inside the same class with 
+	different no of parameters,order of parameters and data types of parameter.
+
+Note:- METHOD OVERLOADING with implicit type casting	
+	  *If there are more than one nearest match is available the compiler will be error.
+
+OBJECT ORIENTATING PROGRAMMING:- Is the approach of writting a program to solve the real world
+	problems by using objects and classes
+	
+CLASSES:- A class is a blueprint for creating objects it will have a data members 
+and member function
+
+OBJECT:- Object is a programming representation of real world entities. In java 
+	objects are creates by using new key world. They are created by JVM it is 
+	mandatory to create class before object creation.
+
+ANONYMOUS OBJECT:- are such a objects which don't have reference variables. These
+	objects can be accessed only once.
+
+DATA MEMBERS:- are the properties or attributes present inside the class.
+MEMBER FUNCTIONS:- are the behaviors Or methods present inside the class.
+
+THERE ARE TWO APPROCHES FOR INITIALIZING THE OBJECTS OF DATA MEMBER
+
+	1. Directly by using the reference variables and variable name
+	2. By using a Constructor
+
+SHADOWING PROBLEM 
+	According to java convention if any local variable is created for assigning values
+	to the instance variable the both local variable and instance variable name is must
+	be same. But if name is same assignment is not happen and instance variable will
+	have the default only.
+	
+SOLUTION OF SHADOWING PROBLEM 
+	SHADOWING PROBLEM  can be solved by using the "this" key world with instance 
+	variable. 
+
+CONSTRUCTOR 
+	constructor are the special method which don't have return type the name will 
+	same as the class name which will called during the object creation.
+	
+INSTANCE VARIABLE                                    LOCAL VARIABLE
+
+* Instance variable present inside       * Local variable are present directly inside
+the class outside the method               method 
+* Memory of instance variable is         * Memory of Local variable is 
+created inside the heap segment            created inside the stack segment
+* They are automatically initialize      * They are not initialize by JVM and don't
+by JVM with default value                  have default value
+* Memory is deallocated by the  garbage  * Memory is deallocated when the stack frame
+collector                                  of method is removed
+* They can accessed in the entire class  * They can accessed only inside the method.
+
+
+
+* If we have to call a static method from another static method in same class then
+we call directly by using the method name.
+* If we have to call a non static method then we have to create object of the class
+in which method is present.
+
+
+CONTROL CONSTRUCT
+	Control construct are the mechanism which is used by the program to create the 
+	control flow of execution inside the program according to programmer requirements
+
+In java there are three types of control construct
+
+SELECTION STATEMENTS         LOOPING STATEMENTS           JUMPING STATEMENTS 
+--> simple if              -->  for loop                 --> break
+--> if else                -->  while loop               --> continue
+--> if else ladder         -->  do while loop            --> return 
+--> switch 
+
+SELECTION STATEMENTS 
+1. Simple if Statement
+	The if statement is used to test a condition.
+	If the condition is true, then code present inside the if block is executed.
+
+2. if-else Statement
+	The if-else statement allows you to execute one block of code if the condition is true
+	 otherwise execute false statement.
+
+3. if-else Ladder
+	The if-else ladder is used to test multiple conditions.
+	 If one of the conditions is true, the corresponding block of code is executed.
+
+4. switch Statement
+	The switch statement is used to execute one block of code from multiple options
+	based on the value of an expression.
+
+LOOPING STATEMENTS
+
+1. for Loop
+	The for loop is used to repeat a block of code a known number of times.
+
+2. while Loop
+	The while loop repeats a block of code as long as the specified condition is true.
+
+3. do-while Loop
+	The do-while loop is similar to the while loop, 
+	but it guarantees that the block of code is executed at least once.
+
+Control Flow Statements
+1. break Statement
+	The break statement is used to exit a loop or a switch statement immediately.
+
+2. continue Statement
+	The continue statement skips the current iteration of a loop and 
+	proceeds with the next iteration.
+
+3. return Statement
+	The return statement exits from the current method and optionally returns a value.
+
+Simple if: Executes a block if the condition is true.
+if-else: Chooses between two blocks of code based on the condition.
+if-else Ladder: Tests multiple conditions sequentially.
+switch: Selects and executes a block based on the value of an expression.
+for Loop: Repeats a block a known number of times.
+while Loop: Repeats a block as long as the condition is true.
+do-while Loop: Like while but executes the block at least once.
+break: Exits the loop or switch immediately.
+continue: Skips the current iteration of the loop.
+return: Exits the method and optionally returns a value.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

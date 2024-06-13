@@ -1,0 +1,4 @@
+* Arrays are treated as objects in java and they are created by using new key word 
+* Arrays is collection data of similar data type, once array is creates size is fixed
+can't be changed.
+
