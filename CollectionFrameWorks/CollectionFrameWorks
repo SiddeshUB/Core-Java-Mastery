@@ -1,0 +1,124 @@
+	Collection frameworks consists of seven inbuilt class 
+	1 ArrayList
+	2 LinkedList
+	3 ArrayDeque
+	4 PriorityQueue
+	5 TreeSet
+	6 HashSet
+	7 LinkedHashset
+	
+	CollectionFrawork was introduce to overcome the disadvantages of Arrays but they
+	have other advantages and as well.
+	
+	Disadvantages of array
+	
+	*Arrays can store Homogeneous data means it can only store similar type of data and
+	 can't store different types of data
+	*Arrays size is fixed  means once we have created an array which as particular size
+	 it can't be altered or modified.
+	*Arrays uses continuous memory location to store the data which means can't use 
+	 disperse memory location.
+	
+ARRAYLIST: 
+ 
+ *ARRAYLIST is inbuilt collectionFrameWork class which is present in the java.util package
+  and efficient for storing Heterogeneous elements.  
+ *ARRAYLIST is internally make use of dynamic Array Data Structure.
+ *ARRAYLIST is efficient in storing the elements at the  rear end but not in intermeadiatory
+  position or front end.
+  
+  .set() is  used to update the existing value with the new value.
+  .addAll() is used to add the elements of one CFW to another CFW.
+   using addAll() we can add the elements either at the front end or rear end
+
+LinkedList:
+
+ *LinkedList is inbuilt CFW class which is present in the java.util package and efficient
+  for storing heterogeneous elements.
+ *It hierarchically which internally make uses doubly ended LinkedList data structure.
+ *It can utilize disperse memory location.
+ *This class is efficient for storing the data in intermeadiatory position at the front end.	
+	
+ArrayDeque:
+  *ArrayDeque is inbuilt CFW class which is present in the java.util package and efficient
+   for storing heterogeneous elements.	
+  *It internally make use of doubly ended queue data Structure.
+  *It is efficient storing the data at in first end or rear end.
+  *add() in ArrayDeque insert the data at the rear end.
+  Note: ArrayDeque the elements will not have indexes hence we can't do any 
+  activity on indexes.
+  
+PriorityQueue:
+  *PriorityQueue is inbuilt CFW class which is present in the java.util package 
+  *PriorityQueue is internally make use of Mean heap data structure 
+   which is used to keep the smallest element at first position in the PriorityQueue
+  *PriorityQueue only store homogeneous data and can't store heterogeneous data.
+  *In PriorityQueue if heterogeneous data is store then it generate castclassException
+
+GENERIC
+
+ 	*To ensure that in collection only similar type of data can be stored the concept 
+ 	 of generic should be used
+ 	*Generic is mechanism which is used while creating the object of the classes to 
+ 	 ensure that type safety can be  achieved.
+ 	*TypeSafety is the property of java which forces the java compiler to ensure that
+ 	 same data types can be used.
+
+TreeSet:
+
+  *TreeSet is inbuilt CFW class which is present in the java.util package.
+  *It internally make use of balanced binary search tree.
+  *It is used storing the elements in asc/dsc order.
+  Note: TreeSet Don't allow to store the duplicate value then it will not store multiple
+  times rather all the value will sorted only once. 
+  *TreeSet does'nt allow heterogeneous data to be stored.If heterogeneous data is stored
+  then will generate classCastException.
+	
+ Wrapper Classes : are used to store the values in a format of object
+  			There are  8 wrapper classes in java shown below
+  			1 Byte
+  			2 Short
+  			3 Integer
+  			4 Long
+  			5 Float
+  			6 double
+  			7 Character 
+  			8 Boolean
+  Boxing and UnBoxing
+  *Boxing is the process of converting primitive datatypes in the forms of an object 
+   while storing the element in collection Frame Works the primitive values will be
+   converted to the object automatically hence it is called autoboxing.
+  *Unboxing is the process of converting object into primitive datatype if these happen
+   automatically then it is called as autounboxing.
+   
+  Note: Traditional for loop can't be used to access the elements present inside the
+  arrayDeque  because traditional for loop make use of index to work but arraydeque 
+  don't have indexes.
+  
+  Note: To create an iterator() is used  to return an iterator.In the iterator hasNext()
+  is used to check whether the collection Frame Work contains next element are not
+  In iterator next() is used to print or access the next element.	
+  
+  ListIterator Accessing the element of listBase classes in the reverse direction
+	
+HashSet Class: Internally makes use of Hashing algorithm which consists of Hash Function 
+whose responsibility to generate unique hashcode using which element will be stored 
+at the specified Bucket Location.
+
+Linked HashSet Class: is child of hashSet class which will have the all properties and
+behaviours of hashSet and also maintain  order of insertion.
+Note: In hashset/linked hashSet class we can store heterogeneous data and we can't
+duplicate values.
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

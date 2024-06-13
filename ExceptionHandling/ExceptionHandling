@@ -1,0 +1,145 @@
+EXCEPTION HANDLING 
+ Exception is event which will abraptly terminate the program. whenever any exception
+ is happen then they have to handle the exception by using USERDEFINEDEXCEPTION(UDH)
+ 
+ *If programmer is not provide UDH then exception handle by default Exception handler
+ 
+ *Statements which might generate Exception should be placed inside the try block
+ *Statements which has to be executed after handling the exception should be placed
+ inside the catch block
+ *Statements which is critical statements must be executed in all the sinariao should 
+ be placed inside the finally block.
+ 
+ *Try block executed irrespective of exception is handling are not.
+ *catch block is executed only if an exception is generated. 
+ *finally block is executed in all the sinario.
+ 
+ There are two type of Exception
+ 	1> Checked Exception
+ 	2> Unchecked Exception
+ 	
+ Checked Exception : are such a Exception which as handle by providing UDEH and if they are 
+ not handle by the java compiler through compilation error and force to handle the Exception.
+ 
+ Unchecked Exception : are such a Exception which are not mandatory to be handle  and if 
+ programmer will not handle the Exception then should be handle by Default Exception handler.
+ 
+PrintStackTrace()
+
+In Java, printStackTrace() is a method used to print the stack trace of an exception. 
+This method belongs to the Throwable class, 
+which is the superclass of all errors and exceptions in the Java language.
+
+When an ArithmeticException occurs (in this case, due to attempting to divide by zero),
+the printStackTrace() method is called on the exception object e, 
+and it prints a stack trace to the standard error stream, 
+which typically goes to the console. 
+This stack trace shows the sequence of method calls that led to the exception being thrown,
+along with the line numbers and class names. 
+can be very useful for debugging and diagnosing issues in your Java programs.
+
+Specific and Generic catch block
+
+In multiple catch block the specific catch block should be placed before the generic catch block.
+If any exception exception occur in try block then jvm checks which catch block can handle
+the exception in the squentially from top to bottom flows which  even  catch block can handle
+the exception will be executed other catch blocks will be skipped .If there is no specific catch
+block is present to handle  the exception then it will be generic catch block if it is provide.
+otherwise if it id not provide the exception then should by default exception handler which will
+result in abroptly terminate the program 
+
+*If generic catch block is placed before the specific catch block then result will compilation
+error.
+
+Exception in multiple methods.
+
+When an exception occurs in a method the control and the exception will be given back to jvm 
+and then jvm checks the method have the UDEH  or not, if UDEH are not present then exception
+is propagated to its caller method for getting handler .if caller method also do'nt have UDEH 
+then again Exception propagated to its caller method like keep on propagating. If none of methods
+can handle the exception then finally it will be handle by the default Exception handler and
+program will terminate abroptly and in such sinario handle the exception in the same method where
+it might generated.
+
+ Rethrowing an Exception 
+ 
+ Exception has got generated in the method  which is called if the information should
+ be passed to the caller method means if the exception should be rethrown to the caller
+ method then THROW keyword should be used to rethrowing the exception and THOWS should
+ be used for giving warning to caller method so that caller mehod also handle the Exception.
+ 
+ DUCKING AN EXCEPTION 
+ 
+ DUCKING an exception is process of not handling the exception in the same method 
+ where it is getting generated and just passing the exception to the caller method
+ without handling it.
+ 
+ In the program taking the user input by using InputStreamReader and BufferReader class
+ and using as a inbuilt method is readLine method.
+ 
+ Readline method is such a method which throws the checked exception i.e ioException
+ because it is check Exception i.e mandatory to handle it takeinput method isn't interted
+ in handling the Exception it is just passing the exception to its caller method by
+ using throws keyword.
+ 
+ Different b/w throw and throws
+    
+       throw                                 throws
+ 
+ * throw keyword is used to            * throws keyword is used to give
+   rethrow  an Exception to              warning to the caller method that
+   caller method                         is might throw an Exception
+ * throw keyword is used within        * throws keyword is used within 
+   the method from Exception             method signature in which giving 
+   must be thrown.                       warning to the caller method.
+ 
+
+Note: In the program if throw keyword is used then the statement placed after the 
+throw keyword will not be executed and if we make sure the statement is after throw 
+keyword is executed then we write the statement in the finally block will be executed
+before control will thrown out the program.
+
+Custom Exception are user-defined exception which are created by the programmer
+specifically for a particular application.To create the custom Exception class has
+to be created which should extend the Exception class
+ The message which has to be displayed while generating the custom Exception object 
+ should be given in the constructor of custom Exception class.
+ 
+ Rules of Method overriding with exception  handling
+ 
+ * If parent class throwing an exception then child class overridden method might not throw Exception
+ * If parent class method is throwing an Exception then child class overridden  method can throw
+   the same Exception.
+ * If parent class method is not throwing an Exception then child class overridden  method can throw
+   the unchecked Exception.
+ * If parent class method is not throwing an Exception then child class overridden  method can't throw
+   the checked Exception.
+ * If parent class method is throwing an Exception then child class overridden method can throw differnt
+   Exception, if parent class method exception and child class overridden method exception 
+   have parent and child relation.
+ * According to rule 5 the child class overridden method can thrown different exception 
+   but it is not possible if parent class method exception and child method exception doesn't
+   have parent and child relationship
+ * If parent class method throwing exception then child class overridden method can
+   throw different exception trough they don't have parent and child relationship 
+   both parent class method exception and child class overridden method exception are
+   runtime exception type(unchecked exception)
+ * If parent class method throwing exception then child class overridden method can
+   throw different exception even through  both are not unchecked exception type 
+   and also don't have parent and child relationship if the child class overridden
+   method exception is unchecked exception
+ * If parent class method throwing an exception then child class overridden method 
+   can't throw border exception  
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 

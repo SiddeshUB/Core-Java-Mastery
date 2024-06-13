@@ -1,0 +1,279 @@
+ ObjectOrientation: is phenominum is used  solve the real world problem by using class and object
+ CLASS: Class is a blue print for creating the object.
+ OBJECT: Object is a real world entity  which representing programming.
+ 
+ There are four pillar of object orientation
+ 1.Encapsulation(code Security) 
+ 2.Inheritance(code re usability)
+ 3.Polymorphism(code flexibility)
+ 4.Abstraction (code readability)
+ 
+ 1.Encapsulation : Encapsulation is a process of binding the data member and member function together means providing security to the important aspect 
+  					of data member and give the control access to the public setters and getters.
+  				   Encapsulation is achieving by using private keyword 
+  		Setter: Setter is special method is used to set the data.
+  		Getter: Getter is special method is used to get the data.
+ 
+ 	If we provided data members as private the direct access is not possible and control access by 
+ 	using public setters and getters
+ 	
+ EX:- Bank(Balance,pin)
+ 	  Employee(Id,name,salary)
+ 	  Student(RollNo,Name,Age,Percentage)
+ 	
+ 2.Inheritance  : Inheritance is a process of acquiring properties and behaveiour from one class to
+ 					another class which will give the properties and behaveiour is called as 
+ 					parent class(super class,base class) and class which will receive the properties and behaveiour is known
+ 					as child  class(sub class,derived class)
+ 				Using Inheritance achieve code reusablitity and also (is-a) relation b/w classes.
+ 		There are six types of inheritance:
+ 		1. SingleInheritance
+ 		2. Hierarchical Inheritance
+ 		3. MultiplelevelInheritance
+ 		4. Hybrid Inheritance
+ 		5. Multiple Inheritance
+ 		6. Cyclic Inheritance
+ 	Multiple Inheritance is not allow in java class because of child class have multiple parents
+ 	diamond shape problem is occur.
+ 	
+ 	Cyclic Inheritance is not allow in java because child can inherited by parent class and 
+ 	parent class can't inherited by child class.
+ 	
+ Rules of Inheritance
+ 
+ 	1. During Inheritance private data members doesn't  participate and inherited to the child class
+ 		because of private data members access in the same class.
+ 	2. During Inheritance Constructor doesn't  participate and inherited to the child class but Executed
+ 		because of super() is present in constructor.
+ 	3. During Inheritance parent class Constructor executed before the child class because of 
+ 		super().super method take the control from child class constructor to parent class constructor is 
+ 		Known as Constructor chaining.
+ 	4. Super keyword will take the control from child class method to parent class method
+
+FINAL KEYWORD
+
+final class: If the class is declared as final will can't be inherited to the child class.
+final method: If the method is declared as final will can't be override to the child class.
+final variable: If the variable id declared as final it became constant can't be modified.
+
+Access Modifier: Is known as Access Specifier given access to other
+
+There are four types of access modifier
+	1.public Access Modifier: It is accessible to everyone inside the project.
+	2.protected Access Modifier: It is accessible to everyone inside the same package and 
+		child class of different package which can't accessible in the non child package.
+	3.default Access Modifier: It is also known as no access modifier It is only accessible 
+		in the same package.
+	4.private Access Modifier: Is is only access inside the same class can't access in the child
+		class.
+	 		
+ 	*Visibility goes decreases from public to private.
+    *Security goes increases from public to private.
+ 
+ Types of methods during inheritance 
+ 	1.Inherited methods: are such methods which are inherited from parent class to child class 
+ 		without any changes or modified.
+ 	2.Override methods: are such methods which are inherited from parent class to child class
+ 		and body is modified according to child requirements.
+ 	3.ChildSpecific or specialized methods: are such methods which are present only inside 
+ 		the child class not present in the parent class.
+ 		
+ 		We can increase the efficiency by including the code flexibility make use of 
+ 		concept polymorphism
+ 		
+ Ex:-
+ Robot(name-Talking(),Walking(),Charging())-TeacherRobot(Teach),ChefRobot(cook),DoctorRobot(surgery)
+ ParentChild
+ Animal(Hunt(),Sleep())  
+ 		
+ 3.Polymorphism	: is a pillar of object orientation which ensures that in program as 1:many relationship exists 
+ 					it is achieving code flexibility.
+ 		*In Polymorphism using parent class reference variable calling methods present in 
+ 		 child class these process of assigning child class reference variable to parent class
+ 		 reference is known as Upcasting.
+ 		*After upcasting only calling inherited and override methods of child class
+ 			not access childSpecfic methods directly
+ 		*The Process of casting child parent class reference variable to child class reference variable
+ 		 is known as Downcasting.
+ 	
+ 	OVERRIDDEN:
+ 	1.During method overriding child class overriden method and parent overriden class  method must be
+ 		same access modifier.
+ 	2.During method overriding child class overriden method and parent overriden class method can have
+ 		different  access modifier provided visibility of method increases from parent to child.
+ 	3.During method overriding child class overriden method and parent overriden 
+ 		class method can have return types must be same
+ 	4.During method overriding child class overriden method and parent overriden class method 
+		class method can have different return types if the return type are co-varient return type
+	
+	COVARIANT RETURN TYPE are the return type which have parent and child relationship.		
+ 	5.During method overriding by using co-varient return type of parent method can have
+ 		parent co-varient return type and child method have child co-varient return type
+ 		vice-versa is not possible
+ 		
+ 	METHOD HIDING: is a process of overridding the static methods of the parent class to child class
+ 					static methods  will be call by checking the reference type.
+ 					
+ 	AGGREGATION AND COMPOSITION:
+ 	
+ 	Aggregation and composition is used to represent Has-a relationship in the project among
+ 	the object.
+ 	Aggregation:The objects which have a has-a relationship b/w them connected by using Aggregation.
+ 	In these one object is consider as owner object and another will be consider as aggregate 
+ 	object. if owner object is destroyed then also aggregate object is access individually.
+ 	
+ 	Composition: The Objects which have a has-a relationship b/w them connected by using Composition
+ 	In Composition owner object and composite object are tightly bound if the owner object is 
+ 	destroyed then composite object is destroyed automatically.
+ 	
+ 	
+ STATIC KEYWORD IN JAVA
+ 
+  default values for instance variables (also known as fields or member variables) 
+  are provided by the Java Virtual Machine (JVM) during the process of object creation.
+  When an object is created, memory is allocated for its instance variables, 
+  and the JVM initializes these variables with their default values based on their data types. 
+ 
+ 	*During execution of program static	variable will be created inside the static segment
+	 non static	variable will be created in the heap segment inside the object.
+	 
+	*static block are always executed before the main method hence any code is executed before
+	 main method should be placed inside the static block.
+	
+	*Non static block are always executed before the constructor hence the piece of code is
+	 executed before constructor should be placed inside the non static block.
+	 
+	*Any piece of code which is executed during the object creation before the constructor 
+	 execution should be placed inside the non static block.
+	 
+	*During static method calling object creation is not required because static elements 
+	present inside the static segment during execution.
+	
+	*If method is not declared as static during method calling object creation is manditory.
+	
+	*Static variables can accessed inside the static block,static methods,non static block,non static methods.
+	
+	*non static variables or instance variables can accessed inside non static block,non static methods they
+	they can't accessed inside the static block,static methods	because non static variable is
+	not allocated.
+
+ABSTRACTION
+	Abstraction is process of hiding irrelevant data in the program it can be achieve by using
+	abstract keyword with class and method.
+	
+	abstract method: are such method which can only have method declaration not have 
+	method body. According to the rule of java if any class have atleast one abstract method 
+	then make class as abstract class
+ 	
+ 	Abstraction can be achieved by using two concepts:
+ 	1. abstract class
+ 	2. interface	
+ 	
+ 	abstract class: is such a class which can not created the object of the class. abstract class
+ 	is consists of abstract methods and concrete methods.
+ 
+ 	Rule of abtraction
+ 	
+ 	*we can't not create the object of abstract class but we create the reference of abstract
+ 	 class which help to achieve polymorphism and the call the method present in the child class
+ 	
+ 	* If any child class inheriting from the abstract class containing abstract methods
+ 		then child class also declare inherited method as abstract 
+ 	* If child class inherited method is not declare as abstract then manditory provide body 
+ 		to the method
+ 	* during abstraction abstract class and abstract method not declare as final because
+ 		of final abstract class  can't be inherited to child class
+ 	* during abstraction  abstract class have final concrete methods in these sinario child
+ 		class will use the body of final concrete method without modified it.
+ 	* with access modifiers public,protected,no access modifier can be declare with abstract
+ 		class and can't declare as private because of private methods can't be inherited and override
+ 	* An abstract method can't be declare static because static method can't be override and can not
+ 		achieve polymorhism. 
+ 	* An abstract class can have final concrete methods and in these sinario the child class of the 
+ 	abstract class will use the body of final concrete method without modified it.
+ 	
+ 	
+Static Methods and Inheritance:
+
+When a subclass declares a static method with the same name and signature 
+as a static method in its superclass, it does not override the superclass method; 
+it hides it.The method called is determined at compile-time based on the reference type,
+not at runtime based on the actual object type.
+
+Static Methods and Overriding:
+
+Static methods in Java cannot be overridden because the concept of overriding 
+is associated with polymorphism, and polymorphism is related to instance methods.
+If a subclass declares a static method with the same name as a static method in its superclass, 
+it is not considered an override; it is method hiding.
+ 		
+ 	* An abstract class contain static variable,non static variable,static block
+ 	  non static block,concrete static methods and concrete non static methods
+ 	  constructor,main method also.	
+ 		
+ 	In abstract class what to do activity refers to an abstract method and how to do activity refers 
+ 	the concrete method
+ 		As abstract class contain  both it is not used to achieve 100% abstraction
+ 		
+ 	*100% abstraction means telling only what to do not how to do hence achieve 100% abstraction
+ 	abstract class are not recommended
+ 	
+ 	*By using abstract class can't achieve multiple inheritance.
+ 		
+INTERFACE 
+	In java interface is a reference type that defines a set of methods signature 
+	without providing method implementation with methods what to do declaration  in implements class has
+	how to do methods provide body according child recquirements.
+	
+	*Interface can be achieve by using interface keyword as follows interface name.
+	Only provide method declaration not provide body of the method
+	*Implementation: A class can implement one or more interfaces using the implements keyword.
+	 When a class implements an interface, it must provide concrete implementations for all the
+	 methods declared in that interface.
+	*Multiple Inheritance: Java allows interfaces to support multiple inheritance,
+	 meaning a class can implement multiple interfaces.
+	*Default Methods: Starting from Java 8, interfaces can also contain default methods,
+	 which are methods with implementations.These methods can be overridden by implementing classes, 
+	 but they provide a default implementation if not overridden.
+	*Static Methods: Java 8 also introduced the ability to define static methods in interfaces.
+	 These methods are invoked on the interface itself and cannot be overridden by implementing classes.
+	*In java two interfaces connected with each other using implements is not allowed. An
+	 interface is never implements another interface.
+	*In java  interface can extend another interface and in these sinario the extend interface
+	 will have all methods which is inheriting
+	*An interface which is empty does not method,variable are called as marker interface.
+	
+ 	
+ 	
+								Concrete class 		 Abstract class 	     Interface
+ Instantiation
+ static variable
+ static blocks
+ static methods
+ non static variable
+ non static block
+ non static methods
+ constructors                   yes                  yes   
+ private methods                yes                  no                    no
+ protected methods              yes                  yes                   yes
+ no access modifier             yes                  yes                   yes
+ public methods                 yes                  yes                   yes
+ default methods                no                   no                    yes
+ abstract methods               no                   yes                   yes
+ main                           yes                  yes                   yes
+ multiple inheritance			No                   No                    yes            
+ default 						yes(object class)    yes(object class)     yes(object class)
+ 	
+ 	
+ 	
+ 				
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	

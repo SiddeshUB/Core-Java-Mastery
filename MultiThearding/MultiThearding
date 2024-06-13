@@ -1,0 +1,132 @@
+MULTITHREADING
+
+MultiThreading refers to the phenomena where multiple threads executes the same program at once.
+
+*Thread is control flow in a program which represents the execution
+
+*SingleThread program means only single thread which is executing the program there thread will
+ be created automatically by jvm to execute  the java program.
+
+*This thread name by default is main thread responsibility to execute the program
+*If in the program multiThreading as to be achieved then multiple threads should be creating.
+
+ There are two ways to achieve multiThreading
+ 
+ By using the thread class
+ By using runnable interface
+
+ 	for achieving multithreading the object of thread class as to be created and the activity
+ 	which has to be Executed by the thread should be placed inside the run method
+ 	programmer should never call run method explicitly rather programmer always call start() 
+ 	which is internally call run() and doing creating stack frame of run() in the new call stack.
+
+Disadvantages of single thread approach
+
+*In singleThreaded program independent activities are present i.e printnumber and printcharacter
+ but because the program is singleThread the independent activities are behaving like dependent
+ activities which is bad practice of writing program because it don't utilizes the memory efficiently
+
+*Hence if in any program independent activities are present then should be executed in the 
+ multithreading environment 
+ 
+ Achieving Multiple threading by using Thread class
+ 
+	*In multithreading environment the indenpendent activities are placed inside the different run
+	 method in different class and how many independent activities are there those many threads are created
+	
+	 In above the program the independent activities are placed in the individual 
+	 run method which will be executed by two different threads parallely helping us to 
+	 achieving multithreading 
+	 
+	 *For multithread program we can't predict the output but we can make sure  that all
+	 independent activities are getting executed concurrently
+
+ Achieving Multiple threading by using Runnable Interface
+ 
+ Note 1: while achieving MultiThread we can create a class which extends to the thread
+ class and keep the activity code which has to be executed by the run method 
+  * These approach of achieving  MT by extending to the thread class is a straight
+    forward and convinient for a simple classes.
+  * In these approach we can create multiple threads by creating object of user 
+    defined class which is extending to thread class
+  * These approach is useful only if the class is not inheriting any other class 
+    because in these approach the classes are which will not allow the multiple inheritance
+ 
+ Note 2 : 
+ 
+ * MT also can be achieved by creating a class which implements the runnable interface
+   instead of extending the thread class
+ * In these approach the class must override the run method to provide the activity 
+   code which should be executed by the thread.
+ * These approach separate the thread behaveour from the thread itself which provide 
+   better code organization. In these approach object of inbuilt thread class and 
+   assinging activities to the thread by passing reference variable of the class to 
+   thread class constructor.
+   
+  * In these approach interfaces are used hence if in any sinario we have achieve 
+   Multithreading along with multiple inheritance then class should implements runnable.
+ 
+ 	
+  JOIN() is a inbuilt method of the thread class which is used to ensure that one thread waits 
+  for another thread to complete its execution it can be used on any  thread and by using it with the 
+  thread  will be moved to the waiting state
+   
+  *Note In multithreaded Environment always main method will starts its execution and its 
+  execution first before other threads Hence we want main thread to wait for other threads to
+  complete their activity then it is possible by using join() method.
+  
+  Daemon Thread 
+  
+  Daemon Thread are the threads that run in the background and are automatically terminated
+  when all non daemon threads have completed there execution daemon threads are mostly used 
+  for the activities like maintainece,monitoring for other background activities.
+  
+  * Keep the logic/activities of daemon thread in the infinite loop 
+  * change the daemon status of the daemon thread as true by using the method setDaemon(true) before
+  starting the thread.
+  
+  In the above the program output typing activity is executing five times and the
+  other support activities are executing atleast once time after the typing activities because they 
+  are threads daemon.
+ 	
+ 	
+  Achieve multipleThreading by using single run()
+  
+  States of Thread
+  
+  Synchronized Keyword: is used to make sure that the block or method which are Synchronized
+  can be executed by only one thread at any given point of time by using synchronized it acts
+  like a lock on the shared resources b/w multiple threads. In synchronized environment the 
+  cpu time might not be utilized efficiently but it will make sure that at any given point of time
+  shared resources getting utilized by only one single thread
+  
+  * Synchronized Keyword is used on the block to make sure that the resource used in the
+    block is accessible only by the single thread at any given point of time .If thread needs
+    resources to be executed and resource is not available then the thread will be moved to 
+    the blocked state until the resource will become available.
+  
+  * DeadLock is sinario in which  multiple threads will be get stuck in the block because
+    of unavailability of resources forever .if deadlock happens then program execution will
+    not proceed further and it will get stucked for infinite time
+  * DeadLock happens because of cyclic dependency in b/w the threads and its programmers 
+    responsibility to ensure that cyclic dependency in b/w thread should not exist.fW  
+ 	
+  * Producer Consumer Problem
+ 	
+ 	Thread Will be keep producing without checking consumer thread as consume or not 
+ 	and also consumer thread is keep on consume without checking producer thread produced
+ 	or not.
+ 	
+ 	Problem can solved by establishing the interThread communication b/w baker thread
+ 	and customer thread(Producer thread and consumer Thread.These can be done by using 
+ 	wait() and notify())
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
